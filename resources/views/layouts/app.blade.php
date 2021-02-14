@@ -2,10 +2,11 @@
 <head>
     <meta charset="utf-8">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Test') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -13,6 +14,5 @@
 
 <body>
 @yield('content')
-    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

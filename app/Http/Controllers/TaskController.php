@@ -12,7 +12,7 @@ class TaskController extends Controller
     {
         $tasks = Task::all();
 
-        return view('task.index',compact('tasks'));
+        return view('task.index', compact('tasks'));
     }
 
 
@@ -25,18 +25,16 @@ class TaskController extends Controller
         $project_assignment_id = $request->project_assignment_id;
 
 
-        foreach ($tasks as $key=>$value)
-        {
+        
+        foreach ($tasks as $key => $value) {
 
             UserTask::create([
-                'project_assignment_id'=>$project_assignment_id,
-                'task_id' =>$value
+                'project_assignment_id' => $project_assignment_id,
+                'task_id' => $value
             ]);
         }
 
-        
-        return redirect()->route('home.index')->with('success','successData');
 
+        return redirect()->route('home.index')->with('success', 'successData');
     }
-
 }

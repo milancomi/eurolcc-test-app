@@ -19,9 +19,6 @@ class UserTasks extends Migration
             $table->unsignedBigInteger('task_id');
             $table->timestamps();
 
-            $table->foreign('task_id')->on('tasks')->references('id')->onDelete('cascade');
-            $table->foreign('project_assignment_id')->on('project_assignments')->references('id')->onDelete('cascade');
-
         });
     }
 

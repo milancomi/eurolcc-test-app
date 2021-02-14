@@ -8,12 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-       public function index()
+    public function index()
     {
 
-        $users= User::all()->load('projects','tasks');
+        $users = User::all()->load('projects', 'tasks');
 
-        return view('home.index',compact('users'));
-
+        return view('home.index', compact('users'));
     }
 }

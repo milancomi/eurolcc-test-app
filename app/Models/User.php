@@ -34,13 +34,13 @@ class User extends Authenticatable
 
 
 
-    public function projects(){
-        return $this->belongsToMany(Project::class,'project_assignments','project_id','user_id')->withPivot('id');
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class, 'project_assignments', 'project_id', 'user_id')->withPivot('id');
     }
 
-    public function tasks(){
-        return $this->belongsToMany(Task::class,'user_tasks','project_assignment_id','task_id')->withPivot('id');
+    public function tasks()
+    {
+        return $this->belongsToMany(Task::class, 'user_tasks', 'project_assignment_id', 'task_id')->withPivot('id');
     }
-
-
 }
