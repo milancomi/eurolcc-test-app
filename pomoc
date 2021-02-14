@@ -1,0 +1,25 @@
+php artisan make:migration users
+php artisan make:migration
+
+
+1.  Sredi migracije
+2. Seed za users, project tasks
+
+
+
+
+Assignments dodela stranica
+1. Forma sa select- projektima, select korisnici,
+
+Tasks stranica
+1. Dodeljen projekat i user se prenosi na ovu stranicu
+2. Ispisuju se iznad forme
+3. Na formi stoji check list sa zadacima
+4. Mora jedan ili vise
+5. Redirekcija na Home
+
+Home stranica
+1. Tabela sa Korisnicima, mail, projekat, vise zadataka
+2.  Link ka Assignments
+
+
